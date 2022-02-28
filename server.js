@@ -10,10 +10,11 @@ const xss = require("xss-clean");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const mongoSanitize = require("express-mongo-sanitize");
+const colors = require("colors");
 
 // Router оруулж ирэх
 const categoriesRoutes = require("./routes/categories");
-const booksRoutes = require("./routes/books");
+const foodsRoutes = require("./routes/foods");
 const usersRoutes = require("./routes/users");
 
 const errorHandler = require("./middleware/error");
@@ -66,7 +67,7 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
-// http parametr pollution халдлагын эсрэг books?name=aa&name=bbb ---> name="bbb"
+// http parametr pollution халдлагын эсрэг foods?name=aa&name=bbb ---> name="bbb"
 app.use(hpp());
 // Body parser
 // Cookie байвал req.cookie рүү оруулж өгнө
@@ -94,7 +95,7 @@ app.use(morgan("combined", { stream: accessLogStream }));
 // use gedgiig ahsiglan turul buriin middleware-uudiig holboj uguh bolomjtoi
 // Route-үүдийг холбож өгч байна // REST API RESOURSE
 app.use("/api/v1/categories", categoriesRoutes);
-app.use("/api/v1/books", booksRoutes);
+app.use("/api/v1/foods", foodsRoutes);
 app.use("/api/v1/users", usersRoutes);
 // Алдаа үүсэхэд байрьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
 app.use(errorHandler);
