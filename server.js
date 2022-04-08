@@ -62,8 +62,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // Express rate limit: Дуудалтын тоог хчзгаарлана
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 3, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
-  message: "15 Минутанд 3 удаа л хандах боломжтой",
+  max: 200, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+  message: "15 Минутанд 200 удаа л хандах боломжтой",
 });
 
 app.use(limiter);

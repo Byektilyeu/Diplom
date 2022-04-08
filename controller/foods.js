@@ -10,7 +10,7 @@ const User = require("../models/User");
 //api/v1/foods
 exports.getFoods = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 5;
+  const limit = parseInt(req.query.limit) || 10;
   const sort = req.query.sort;
   const select = req.query.select;
 
@@ -40,7 +40,7 @@ exports.getFoods = asyncHandler(async (req, res, next) => {
 // api/v1/categories/:catId/foods
 exports.getCategoryFoods = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 5;
+  const limit = parseInt(req.query.limit) || 10;
   const sort = req.query.sort;
   const select = req.query.select;
 
@@ -169,7 +169,7 @@ exports.uploadFoodPhoto = asyncHandler(async (req, res, next) => {
     throw new MyError("Та зургийн хэмжээ хэтэрсэн  байна", 400);
   }
 
-  file.name = `photo_${req.params.id}${path.parse(file.name).ext}`;
+  // file.name = `photo_${req.params.id}${path.parse(file.name).ext}`;
 
   // zooh gazriig zaaj ugnu
   file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, (err) => {

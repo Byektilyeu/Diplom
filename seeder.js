@@ -7,6 +7,8 @@ const Food = require("./models/Food");
 const User = require("./models/User");
 dotenv.config({ path: "./config/config.env" });
 
+const colors = require("colors");
+
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

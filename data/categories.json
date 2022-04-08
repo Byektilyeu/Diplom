@@ -1,33 +1,33 @@
 [
   {
     "_id": "62076b9c55fb1175fe77fe34",
-    "name": "Уран зохиол",
-    "description": "Дэлхийн сонгодог уран зохиолуудаас үзэээрэй",
-    "photo": "lit123.jpg",
+    "name": "Хоолны категори 1",
+    "description": "Хоолны категорийн тайлбар 1",
+    "photo": "category1.jpg",
     "createdAt": "2022-02-08T06:43:52.905Z",
     "__v": 0
   },
   {
     "_id": "62021969264a61cb2f1cacac",
-    "name": "Програмчлал",
-    "description": "Орчин үеийн веб програмчлалыг эндээс судлаарай",
-    "photo": "literature.jpg",
+    "name": "Хоолны категори 2",
+    "description": "Хоолны категорийн тайлбар 2",
+    "photo": "category2.jpg",
     "createdAt": "2022-02-08T07:19:05.507Z",
     "__v": 0
   },
   {
     "_id": "6202279d264a61cb2f1cacaf",
-    "name": "Бизнес",
-    "description": "Бизнес удирдлагын тухай ном",
-    "photo": "biz.jpg",
+    "name": "Хоолны категори 3",
+    "description": "Хоолны категорийн тайлбар 3",
+    "photo": "category3.jpg",
     "createdAt": "2022-02-08T08:19:41.044Z",
     "__v": 0
   },
   {
-    "name": "Шинжлэх ухаан",
-    "description": "Шинжлэх ухааны тухай номнууд",
-    "photo": "science.jpg",
     "_id": "6204ac201b839168eb40bea5",
+    "name": "Хоолны категори 4",
+    "description": "Хоолны категорийн тайлбар 4",
+    "photo": "category4.jpg",
     "createdAt": "2022-02-10T06:09:36.535Z",
     "__v": 0
   }

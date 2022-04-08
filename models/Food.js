@@ -9,6 +9,13 @@ const FoodScheme = new mongoose.Schema(
       trim: true,
       maxlength: [250, "Хоолны нэрийн урт дээд тал нь 250 тэмдэгт байх ёстой"],
     },
+    ingredients: [
+      {
+        name: { type: String, default: "" },
+        quantity: { type: String, default: "" },
+        type: { type: String, default: "" },
+      },
+    ],
     photo: {
       type: String,
       default: "no-photo.jpg",
@@ -22,7 +29,7 @@ const FoodScheme = new mongoose.Schema(
         " Хоолны зохиогчийн нэрийн урт дээд тал нь 20 тэмдэгт байх ёстой",
       ],
     },
-    averageRating: {
+    rating: {
       type: Number,
       min: [1, "rating хамгийн багадаа 1 байх ёстой"],
       max: [10, "rating хамгийн ихдээ 10 байх ёстой"],
@@ -33,11 +40,20 @@ const FoodScheme = new mongoose.Schema(
       trim: true,
       maxlength: [5000, "Хоолны нэрийн урт дээд тал нь 20 тэмдэгт байх ёстой"],
     },
+    steps: {
+      type: String,
+      required: [true, "Хоолыг хийх дарааллыг оруулна уу?"],
+      trim: true,
+      default: "",
+    },
+    calorie: {
+      type: Number,
+      default: 0,
+    },
     bestseller: {
       type: Boolean,
       default: false,
     },
-    available: [String],
     category: {
       type: mongoose.Schema.ObjectId,
       ref: "Category",
