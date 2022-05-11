@@ -9,6 +9,7 @@ const {
   deleteFood,
   updateFood,
   uploadFoodPhoto,
+  uploadFoodVideo,
 } = require("../controller/foods");
 
 // const { getFoodComments } = require("../controller/comments");
@@ -30,6 +31,10 @@ router
 router
   .route("/:id/photo")
   .put(protect, authorize("admin", "operator"), uploadFoodPhoto);
+
+router
+  .route("/:id/video")
+  .put(protect, authorize("admin", "operator"), uploadFoodVideo);
 
 // router.route("/:id/comments").get(getBookComments);
 

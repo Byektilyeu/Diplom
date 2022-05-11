@@ -14,7 +14,11 @@ const {
   logout,
 } = require("../controller/users");
 
-const { getUserFoods } = require("../controller/foods");
+const {
+  getUserFoods,
+  addToCart,
+  deleteCartItem,
+} = require("../controller/foods");
 // const { getUserComments } = require("../controller/comments");
 
 const router = express.Router();
@@ -28,10 +32,14 @@ router.route("/reset-password").post(resetPassword);
 router.use(protect);
 
 // "/api/v1/users"
+
+router.route("/add-to-cart").post(authorize("admin"), addToCart);
+router.route("/delete-cart-item").post(authorize("admin"), deleteCartItem);
 router
   .route("/")
   .get(authorize("admin"), getUsers)
   .post(authorize("admin"), createUser);
+
 router
   .route("/:id")
   .get(authorize("admin", "operator"), getUser)

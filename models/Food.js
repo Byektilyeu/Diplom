@@ -20,6 +20,13 @@ const FoodScheme = new mongoose.Schema(
       type: String,
       default: "no-photo.jpg",
     },
+    video: {
+      type: String,
+      required: [true, "хоолны  оруулна уу"],
+      unique: true,
+      trim: true,
+      maxlength: [2500, "Хоолны  урт дээд тал нь 250 тэмдэгт байх ёстой"],
+    },
     author: {
       type: String,
       required: [true, "Хоолны зохиогчийн нэрийг оруулна уу"],
@@ -54,6 +61,12 @@ const FoodScheme = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+
+    time: {
+      type: Number,
+      default: 0,
+    },
+
     category: {
       type: mongoose.Schema.ObjectId,
       ref: "Category",

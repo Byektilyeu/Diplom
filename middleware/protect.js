@@ -6,6 +6,7 @@ const User = require("../models/User");
 exports.protect = asyncHandler(async (req, res, next) => {
   let token = null;
 
+  console.log("+++++++++++++++++", req.headers);
   if (req.headers.authorization) {
     token = req.headers.authorization.split(" ")[1];
   } else if (req.cookies) {
@@ -20,7 +21,9 @@ exports.protect = asyncHandler(async (req, res, next) => {
     );
   }
 
+  console.log("-------------", token);
   const tokenObj = jwt.verify(token, process.env.JWT_SECRET);
+  console.log("-------------", tokenObj);
 
   req.userId = tokenObj.id;
 

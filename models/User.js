@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { nextTick } = require("process");
+const Food = require("./Food");
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -25,12 +26,24 @@ const UserSchema = new mongoose.Schema({
     enum: ["user", "operator", "admin"],
     default: "user",
   },
+  
   password: {
     type: String,
     minlength: 4,
     required: [true, "нууц үгээ оруулна уу"],
     select: false,
   },
+
+  cart: {
+    items: [
+      {
+        foodId: {
+          type: mongoose.Types.ObjectId,
+        },
+      },
+    ],
+  },
+
   resetPasswordToken: String,
   reserPasswordExpire: Date,
   createdAt: {
@@ -38,6 +51,19 @@ const UserSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+UserSchema.methods.addToCart = function (food) {
+  let cart = this.cart;
+  cart.items.push({ foodId: food._id });
+  return this.save();
+};
+
+UserSchema.methods.deleteCartItem = function (food) {
+  let cart = this.cart;
+  const foodID = food._id;
+  cart.items.pop(foodID);
+  return this.save();
+};
 
 UserSchema.pre("save", async function (next) {
   // Нууц үг өөрчлөгдөөгүй бол дараачийн middleware рүү шилж

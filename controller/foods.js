@@ -10,7 +10,7 @@ const User = require("../models/User");
 //api/v1/foods
 exports.getFoods = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const limit = parseInt(req.query.limit) || 1000;
   const sort = req.query.sort;
   const select = req.query.select;
 
@@ -40,7 +40,7 @@ exports.getFoods = asyncHandler(async (req, res, next) => {
 // api/v1/categories/:catId/foods
 exports.getCategoryFoods = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const limit = parseInt(req.query.limit) || 100;
   const sort = req.query.sort;
   const select = req.query.select;
 
@@ -78,6 +78,74 @@ exports.getFood = asyncHandler(async (req, res, next) => {
     data: food,
   });
 });
+
+exports.addToCart = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.userId);
+  // console.log("==================================", req.body);
+  // const food = await Food.findById(req.body._id);
+  // if (!food) {
+  //   //aldaa tsatsaj bna
+  //   throw new MyError(req.body.id + " ID-тэй gategory байхгүй", 400);
+  // }
+
+  // for (let user in req.body) {
+  //   // console.log(attr);
+  //   food[attr] == req.body[attr];
+  // }
+
+  // food.save();
+
+  // const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+  //   new: true,
+  //   runValidators: true,
+  // });
+  // if (!user) {
+  //   throw new MyError(req.params.id + " ID-тэй хэрэглэгч байхгүй", 400);
+  // }
+
+  // console.log("ppppppppppppppppppppppppppppp", food._id);
+  // user.addToCart(food);
+  // user.save();
+
+  Food.findById(req.body._id)
+    .then((food) => {
+      user.addToCart(food);
+    })
+    .catch((err) => console.log(err));
+
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
+
+exports.deleteCartItem = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.userId);
+
+  Food.findById(req.body._id)
+    .then((food) => {
+      user.deleteCartItem(food);
+    })
+    .catch((err) => console.log(err));
+
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
+
+// exports.deleteFoodCart = asyncHandler(async (req, res, next) => {
+//   const food = await Food.findById(req.body._id);
+
+//   if (!food) {
+//     throw new MyError(req.params.id + "ID тэй хоол байхгүй байна", 404);
+//   }
+
+//   res.status(200).json({
+//     success: true,
+//     data: food,
+//   });
+// });
 
 exports.createFood = asyncHandler(async (req, res, next) => {
   const category = await Category.findById(req.body.category);
@@ -191,9 +259,49 @@ exports.uploadFoodPhoto = asyncHandler(async (req, res, next) => {
   });
 });
 
+// PUT:  api/v1/foods/:id/video
+exports.uploadFoodVideo = asyncHandler(async (req, res, next) => {
+  const food = await Food.findById(req.params.id);
+  if (!food) {
+    throw new MyError(req.params.id + " ID-тэй хоол байхгүй", 400);
+  }
+
+  const file = req.files.file;
+
+  //video upload
+  if (!file.mimetype.startsWith("image")) {
+    throw new MyError("Та зураг upload хийнэ үү", 400);
+  }
+
+  // if (file.size > process.env.MAX_UPLOAD_FILE_SIZE) {
+  //   throw new MyError("Та зургийн хэмжээ хэтэрсэн  байна", 400);
+  // }
+
+  // file.name = `photo_${req.params.id}${path.parse(file.name).ext}`;
+
+  // zooh gazriig zaaj ugnu
+  file.mv(`${process.env.FILE_UPLOAD_PATH_VIDEO}/${file.name}`, (err) => {
+    if (err) {
+      throw new MyError(
+        "Файлыг хуулах явцад алдаа гарлаа Алдаа: " + err.message,
+        400
+      );
+    }
+
+    // database deerh hoolnii neriig uurchilj save hiij bna
+    food.video = file.name;
+    food.save();
+
+    res.status(200).json({
+      success: true,
+      data: file.name,
+    });
+  });
+});
+
 exports.getUserFoods = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 5;
+  const limit = parseInt(req.query.limit) || 100;
   const sort = req.query.sort;
   const select = req.query.select;
 
