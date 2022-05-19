@@ -27,7 +27,9 @@ exports.login = asyncHandler(async (req, res, next) => {
   }
 
   //Тухайн хэргэлэгчийг хайна
-  const user = await User.findOne({ email }).select("+password");
+  const user = await User.findOne({ email })
+    .select("+password")
+    .populate("cart");
 
   if (!user) {
     throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 401);
@@ -91,7 +93,7 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
 });
 
 exports.getUser = asyncHandler(async (req, res, next) => {
-  const user = await User.findById(req.params.id);
+  const user = await User.findById(req.params.id).populate("cart");
 
   if (!user) {
     //aldaa tsatsaj bna

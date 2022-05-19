@@ -33,17 +33,21 @@ router.use(protect);
 
 // "/api/v1/users"
 
-router.route("/add-to-cart").post(authorize("admin"), addToCart);
-router.route("/delete-cart-item").post(authorize("admin"), deleteCartItem);
+router
+  .route("/add-to-cart")
+  .post(authorize("admin", "operator", "user"), addToCart);
+router
+  .route("/delete-cart-item")
+  .post(authorize("admin", "operator", "user"), deleteCartItem);
 router
   .route("/")
   .get(authorize("admin"), getUsers)
-  .post(authorize("admin"), createUser);
+  .post(authorize("admin", "operator", "user"), createUser);
 
 router
   .route("/:id")
-  .get(authorize("admin", "operator"), getUser)
-  .put(authorize("admin"), updateUser)
+  .get(authorize("admin", "operator", "user"), getUser)
+  .put(authorize("admin", "operator", "user"), updateUser)
   .delete(authorize("admin"), deleteUser);
 router
   .route("/:id/foods")

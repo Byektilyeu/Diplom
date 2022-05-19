@@ -20,21 +20,21 @@ const router = express.Router();
 router
   .route("/")
   .get(getFoods)
-  .post(protect, authorize("admin", "operator"), createFood);
+  .post(protect, authorize("admin", "operator", "user"), createFood);
 
 router
   .route("/:id")
   .get(getFood)
-  .delete(protect, authorize("admin", "operator"), deleteFood)
-  .put(protect, authorize("admin", "operator"), updateFood);
+  .delete(protect, authorize("admin", "operator", "user"), deleteFood)
+  .put(protect, authorize("admin", "operator", "user"), updateFood);
 
 router
   .route("/:id/photo")
-  .put(protect, authorize("admin", "operator"), uploadFoodPhoto);
+  .put(protect, authorize("admin", "operator", "user"), uploadFoodPhoto);
 
 router
   .route("/:id/video")
-  .put(protect, authorize("admin", "operator"), uploadFoodVideo);
+  .put(protect, authorize("admin", "operator", "user"), uploadFoodVideo);
 
 // router.route("/:id/comments").get(getBookComments);
 

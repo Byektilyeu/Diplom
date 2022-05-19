@@ -9,22 +9,27 @@ const FoodScheme = new mongoose.Schema(
       trim: true,
       maxlength: [250, "Хоолны нэрийн урт дээд тал нь 250 тэмдэгт байх ёстой"],
     },
-    ingredients: [
-      {
-        name: { type: String, default: "" },
-        quantity: { type: String, default: "" },
-        type: { type: String, default: "" },
-      },
-    ],
+    // ingredients: [
+    //   {
+    //     name: { type: String, default: "" },
+    //     quantity: { type: String, default: "" },
+    //     type: { type: String, default: "" },
+    //   },
+    // ],
+    ingredients: {
+      type: String,
+      required: [true, "хоолны орцыг оруулна уу"],
+      trim: true,
+    },
     photo: {
       type: String,
       default: "no-photo.jpg",
     },
     video: {
       type: String,
-      required: [true, "хоолны  оруулна уу"],
-      unique: true,
-      trim: true,
+      // required: [true, "хоолны  оруулна уу"],
+      // unique: true,
+      // trim: true,
       maxlength: [2500, "Хоолны  урт дээд тал нь 250 тэмдэгт байх ёстой"],
     },
     author: {

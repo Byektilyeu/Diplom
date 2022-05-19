@@ -30,7 +30,7 @@ router
 router
   .route("/:id")
   .get(getCategory)
-  .put(protect, authorize("admin", "operator"), updateCategory)
+  .put(protect, authorize("admin"), updateCategory)
   .delete(protect, authorize("admin"), deleteCategory);
 
 // export hiij bna

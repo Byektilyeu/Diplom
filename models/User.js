@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema({
     enum: ["user", "operator", "admin"],
     default: "user",
   },
-  
+
   password: {
     type: String,
     minlength: 4,
@@ -34,15 +34,17 @@ const UserSchema = new mongoose.Schema({
     select: false,
   },
 
-  cart: {
-    items: [
-      {
-        foodId: {
-          type: mongoose.Types.ObjectId,
-        },
-      },
-    ],
-  },
+  // cart: {
+  //   items: [
+  //     {
+  //       foodId: {
+  //         type: mongoose.Types.ObjectId,
+  //       },
+  //     },
+  //   ],
+  // },
+
+  cart: [{ type: mongoose.Types.ObjectId, ref: "Food" }],
 
   resetPasswordToken: String,
   reserPasswordExpire: Date,
@@ -52,16 +54,23 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
+// UserSchema.methods.addToCart = function (food) {
+//   let cart = this.cart;
+//   cart.items.push({ foodId: food._id });
+//   return this.save();
+// };
+
 UserSchema.methods.addToCart = function (food) {
   let cart = this.cart;
-  cart.items.push({ foodId: food._id });
+  console.log("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&", food._id);
+  cart.push(food._id);
   return this.save();
 };
 
-UserSchema.methods.deleteCartItem = function (food) {
+UserSchema.methods.deleteCartItem = function (foodID) {
   let cart = this.cart;
-  const foodID = food._id;
-  cart.items.pop(foodID);
+  const isExisting = cart.findIndex((i) => i.foodId == foodID);
+  cart.splice(isExisting, 1);
   return this.save();
 };
 

@@ -109,7 +109,7 @@ exports.addToCart = asyncHandler(async (req, res, next) => {
 
   Food.findById(req.body._id)
     .then((food) => {
-      user.addToCart(food);
+      user.addToCart(food._id);
     })
     .catch((err) => console.log(err));
 
@@ -121,12 +121,12 @@ exports.addToCart = asyncHandler(async (req, res, next) => {
 
 exports.deleteCartItem = asyncHandler(async (req, res, next) => {
   const user = await User.findById(req.userId);
+  user.deleteCartItem(req.body._id);
+  // Food.findById(req.body._id)
+  //   .then((food) => {
 
-  Food.findById(req.body._id)
-    .then((food) => {
-      user.deleteCartItem(food);
-    })
-    .catch((err) => console.log(err));
+  //   })
+  //   .catch((err) => console.log(err));
 
   res.status(200).json({
     success: true,
@@ -172,7 +172,7 @@ exports.deleteFood = asyncHandler(async (req, res, next) => {
     throw new MyError(req.params.id + "ID тэй хоол байхгүй байна", 404);
   }
 
-  if (food.createUser.toString() !== req.userId && req.userRole !== "admin") {
+  if (food.createUser.toString() !== req.userId) {
     throw new MyError(
       "Та зөвхөн өөрийнхөө оруулсан хоолны мэдээллийг л устгах боломжтой",
       403
@@ -247,6 +247,13 @@ exports.uploadFoodPhoto = asyncHandler(async (req, res, next) => {
         400
       );
     }
+
+    // if (food.createUser.toString() !== req.userId) {
+    //   throw new MyError(
+    //     "Та зөвхөн өөрийнхөө оруулсан хоолны мэдээллийг л өөрчлөх боломжтой",
+    //     403
+    //   );
+    // }
 
     // database deerh hoolnii neriig uurchilj save hiij bna
     food.photo = file.name;
@@ -329,3 +336,34 @@ exports.getUserFoods = asyncHandler(async (req, res, next) => {
     pagination,
   });
 });
+
+// exports.getUserCartFoods = asyncHandler(async (req, res, next) => {
+//   const page = parseInt(req.query.page) || 1;
+//   const limit = parseInt(req.query.limit) || 100;
+//   const sort = req.query.sort;
+//   const select = req.query.select;
+
+//   ["select", "sort", "page", "limit"].forEach((el) => delete req.query[el]);
+
+//   //Pagination
+//   const pagination = await paginate(page, limit, Food);
+
+//   req.query._id = req.userId;
+
+//   // populate gedeg ni category-iin medeelliig foods deer davhar oruulj irj bna
+//   const foods = await Food.find(req.query, select)
+//     // .populate({
+//     //   path: "category",
+//     //   select: "name ",
+//     // })
+//     // .sort(sort)
+//     // .skip(pagination.start - 1)
+//     // .limit(limit);
+
+//   res.status(200).json({
+//     success: true,
+//     count: foods.length,
+//     data: foods,
+//     pagination,
+//   });
+// });

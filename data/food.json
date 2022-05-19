@@ -1,282 +1,137 @@
 [
   {
-    "name": "Crock Pot Roast1",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "Жинэсэн чэс, (Баклажан)",
+    "ingredients": "Чэс 1кг, давс 5г, ус 200мг, гурил 70г, ргамлын тос 50г, яншуй 10г",
     "photo": 5,
     "author": "Bek",
     "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
+    "content": "Ногоогоор жигнэж хийх хоол",
+    "steps": "Чэсийг угааж, цэвэрлээд, нимгэн дугуй хэршиж, давстай халуун усанд 5мтнут чанана. Чанасан чэсийг шүүж аваад, сэвээрнэ. Хөрсөн чэсийг хуурай гурилд өнхрүүлээд, халаасан толгой хайруулын тавганд хийж, хоёр талд нь шаргал хайрагдас тогттол шараад, зузаан ёроолтой саванд хийж, таглаад 30мин жигнэнэ. Бэлэн болсон чэсийг таваглаад хярж хэрчсэн яншуй цацалж олгоно",
     "calorie": 123,
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "video": "https://www.youtube.com/embed/VihU0TISEpc",
+    "category": "627cf47cecbd38addd949186",
+    "createUser": "627cf20022a2fa96d4041849",
+    "updateUser": "627cf20022a2fa96d4041849"
   },
   {
-    "name": "Crock Pot Roast2",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "Жигнэсэн ногоо ",
+    "ingredients": "Хурган гуа, 300гр, чинжүү 200 гр, улаан лооль 150г, яншуй 15гр, давс, нунтаг хар повоор.",
     "photo": 5,
     "author": "Bek",
     "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
+    "content": "Жигнэсэн ногоогоор хийсэн үндсэн хоол",
+    "steps": "Амтат чинжүүг угааж, цэвэрлээд, нарийн гонзгой хэрчинэ. Хурган гуа чэсийг угаагаад, сармис хэлбэртэй хэрчинэ. Улаан лоолийг буцалж байгаа усанд 2мин байлгаж шалзлаад, хальсыг нь авч, сармис хэлбэртэй хэрчинэ.",
     "calorie": 123,
+    "video": "https://www.youtube.com/embed/NMcF9XlbakU",
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "category": "627cf47cecbd38addd949186",
+    "createUser": "627cf20022a2fa96d4041849",
+    "updateUser": "627cf20022a2fa96d4041849"
   },
   {
-    "name": "Crock Pot Roast3",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "Алимны хүчил, жигнэсэн шар лууван",
+    "ingredients": "Шар лууван 200г, алимны хүчил 100мг, цөцгийн тос 100г, яншуй 30г",
     "photo": 5,
     "author": "Bek",
+    "video": "https://www.youtube.com/embed/m0KFFT9cfJM",
     "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
+    "content": "Алимны хүчил, жигнэсэн шар лууван ашиглан үндсэн хоол хийх",
+    "steps": "Шар лууванг угааж, цэвэрлээд, нимгэн дугуй хэрчинэ. Халаасан цөцгийн тостой хайруулын тавганд хэрчсэн шар лууванг хийж хөнгөн шараад, алимны хүчил, яншуй нэмж, жигнэж болно. ",
     "calorie": 123,
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "category": "627cf47cecbd38addd949186",
+    "createUser": "627cf20022a2fa96d4041849",
+    "updateUser": "627cf20022a2fa96d4041849"
   },
   {
-    "name": "Crock Pot Roast4",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "Гурвалжин будаатай битүү шарсан сагамхай загас",
+    "ingredients": "Сагамхай загасны цул мах 160г, сонгино 120г, гурил хоолны 2 халбага, үйрүүлсэн бяслаг хоолны 2 халбага, гурвалжин будаа, улаан лоолийн сүмс тус бүр 1 аяга, давс, нунтаг хар повоор.",
     "photo": 5,
-    "author": "Bek",
-    "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
-    "calorie": 123,
+    "author": "Byektilyeu",
+    "video": "https://www.youtube.com/embed/AYOjDKbluo4",
+    "rating": 7,
+    "content": "Гурвалжин будаатай болон битүү шарсан сагамхай загас ашиглан загастай хоол хийх",
+    "steps": "Бэлтгэсэн сагамхай загасыг том хэсгээр хэрчинэ. Давс, повоор цацаад гурилаар бүрж, шарна. Гурвалжин будааг угаагаад 1:2 хэмжээний давстай усанд хйиж, болтол нь чанана. Тосолсон хайруулын тогооны захаар гурвалжин будааг хийж, голд нь шарсан загасны мах тавиад дээгүүр нь шарсан сонгино тавьж байрлуулна. Нимбэгний шахсан шүүсээр шүршиж, сүмс асгаад үйрүүлсэн бяслаг цацаж, цөөцгийн тос тавиад шарах шүүгээнд 30 мин битүү шарна. ",
+    "calorie": 143,
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "category": "627d43263392ba181bdbd901",
+    "createUser": "627d47033392ba181bdbd903",
+    "updateUser": "627d47033392ba181bdbd903"
   },
   {
-    "name": "Crock Pot Roast5",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "Шанзалсан хулд загас",
+    "ingredients": "Толгой, сүүлтэй хулд загас 1.5 кг, арьс, ясгүй утсан загасны цул мах 100г, урт үртэй цагаан будаа, давс, цагаан дарс хоолны 4 халбага.",
     "photo": 5,
-    "author": "Bek",
-    "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
-    "calorie": 123,
+    "author": "Byektilyeu",
+    "video": "https://www.youtube.com/embed/KppQ9jwEFsE",
+    "rating": 7,
+    "content": "Шанзалсан хулд загасыг шарж, амтат хоол хийх",
+    "steps": "Шанзалсан хулд загасыг том хэсгээр хэрчинэ. Давс, повоор цацаад гурилаар бүрж, шарна. Гурвалжин будааг угаагаад 1:2 хэмжээний давстай усанд хйиж, болтол нь чанана. Тосолсон хайруулын тогооны захаар гурвалжин будааг хийж, голд нь шарсан загасны мах тавиад дээгүүр нь шарсан сонгино тавьж байрлуулна. Нимбэгний шахсан шүүсээр шүршиж, сүмс асгаад үйрүүлсэн бяслаг цацаж, цөөцгийн тос тавиад шарах шүүгээнд 30 мин битүү шарна. ",
+    "calorie": 143,
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "category": "627d43263392ba181bdbd901",
+    "createUser": "627d47033392ba181bdbd903",
+    "updateUser": "627d47033392ba181bdbd903"
   },
   {
-    "name": "Crock Pot Roast6",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "T ястай шарсан мах",
+    "ingredients": "300г жинтэй нурууны ястай мах 2ш, чидуны тос хоолны 10 халбага, булцуут сонгино 1ш, сармис 1хумс, улаан дарс хоолны 9халбага, улаан дарсны цуу хоолны 3 халбага, давс, шинэ нунтагласан повоор, ногоон тос 40г.",
     "photo": 5,
-    "author": "Bek",
-    "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
-    "calorie": 123,
+    "author": "Byektilyeu",
+    "video": "v1",
+    "rating": 7,
+    "content": "Шанзалсан хулд загасыг шарж, амтат хоол хийх",
+    "steps": "Сонгиныг цагираг хэлбэртэй хэрчинэ. Сармисыг няцална. Улаан дарс, цуу, ургамлын тосыг хольж, хутгагчаар хутган мах цуужуулах хольц бэлтгэнэ. Дээрээс нь сонгино, сармис, давс, повоор нэмж хийнэ. Бэлтгэсэн хольцонд махыг хийж, 12 цаг байлгана цуужуулна. Махыг гаргаад, повоор цацаж, амт оруулаад ногоон тостой болгоно.",
+    "calorie": 125,
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "category": "627d43263392ba181bdbd989",
+    "createUser": "627d47033392ba181bdbd903",
+    "updateUser": "627d47033392ba181bdbd903"
   },
   {
-    "name": "Crock Pot Roast7",
-    "ingredients": [
-      {
-        "name": " beef roast",
-        "quantity": "1",
-        "type": "Meat"
-      },
-      {
-        "name": "brown gravy mix",
-        "quantity": "1 package",
-        "type": "Baking"
-      },
-      {
-        "name": "dried Italian salad dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "dry ranch dressing mix",
-        "quantity": "1 package",
-        "type": "Condiments"
-      },
-      {
-        "name": "water",
-        "quantity": "1/2 cup",
-        "type": "Drinks"
-      }
-    ],
+    "name": "Аргентин аргаар бэлтгэсэн бифштекс",
+    "ingredients": "Тус бүр 200 г жинтэй гол мах 2 зүсэм, чидуны тос хоолны 2 халбага, утсан мах 40г, амтат улаан, ногоон чинжүүг тус бүр 1 ш, наранцэцгийн тос хоолны 1халбага, нөөцшилсөн эрдэнэшиш 1 жижиг сав, кетчуп хоолны 1 халбага, цагаан дарс хоолны 1 халбага, давс, шинэ нунтагласан повоор, зөгийн бал хоолны 1 халбага, яншуйны мөчир 2ш. ",
     "photo": 5,
-    "author": "Bek",
-    "rating": 4,
-    "content": "Hoolnii tailbar 1 hhaa",
-    "steps": "Place beef roast in crock pot. Mix the dried mixes together in a bowl and sprinkle over the roast. Pour the water around the roast. Cook on low for 7-9 hours.",
-    "calorie": 123,
+    "author": "Byektilyeu",
+    "video": "v2",
+    "rating": 7,
+    "content": "Аргентин аргаар бэлтгэсэн бифштекс хийх",
+    "steps": "Сүмсэнд зориулан утсан махыг жижиг дөрвөлжин,чинжүүг нарийн савхан хэлбэртэй хэрчинэ. Халаасан наранцэцгийн тосонд утсан махыг хйиж шараад чинжүү, шүүснээс нь шүүж авсан эрдэнэшиш нэмнэ. Зөгийн балыг кетчуп, цагаан дарстай хольж хутгаад шарж байгаа ногоо руу бага багаар хийж, давс повоороор амт оруулна. 3 минут орчим чанаад гаргаж, дулаан газар тавина. Бифштексийг сайн халаасан тосонд хийж, хүчтэй галаар 2 талаас нь тус бүр 1 минут шараад дунд зэргийн гал дээр үргэлжлүүлэн 3-4 минут шарж булун болгоно. Гаргаад давс, повоороор амт оруулаад халаасан тавганд сүмстэй ногооны хамт таваглаж, хачирт нь мөнгөлөг цаасанд ороож, битүү шарсан төмс өгнө. ",
+    "calorie": 128,
     "bestseller": true,
-    "category": "62076b9c55fb1175fe77fe34",
-    "createUser": "620c8db6dc0b6bb8ed030f75",
-    "updateUser": "620c8db6dc0b6bb8ed030f75"
+    "category": "627d43263392ba181bdbd989",
+    "createUser": "627d47033392ba181bdbd903",
+    "updateUser": "627d47033392ba181bdbd903"
+  },
+  {
+    "name": "Грилд шарсан дэгдээхэйний мах",
+    "ingredients": "1 кг орчим жинтэй дэгдээхэйний маханд цөцгийн тос 50г, гич 15г, хуурай цагаан дарс 100г, цөцгий 30г, давс, нунтаг повоор, орегано.",
+    "photo": 5,
+    "author": "Byektilyeu",
+    "video": "v3",
+    "rating": 7,
+    "content": "Грилд шарсан дэгдээхэйний махаар хийсэн амтат хоол",
+    "steps": "Дэгдээхэйний махны бэлдцийг давс, нунтаг повоор цацаж амт тохируулаад грильд нэг цаг орчим шарна. Дараа нь шарсан махыг хэсэглэнэ хуваана. Цөцгийн тосыг хайлуулж гич, дарс, орегона цөцгийг нэмж сайн хутгаж жигд бие бүтэцтэй болгоод шарах үед гарсан шүүс эсвэл бага хэмжээний шөл нэмээд махны дээрээс хийж буцалгаж бэлэн болгоно.",
+    "calorie": 128,
+    "bestseller": false,
+    "category": "627d43263392ba181bdbd888",
+    "createUser": "627d47033392ba181bdbd903",
+    "updateUser": "627d47033392ba181bdbd903"
+  },
+  {
+    "name": "Тахианы жигнэсэн гуя",
+    "ingredients": "Тахианы мах 750 г, цөцгийн тос 40 г, цөцгий 30 г, булцуут сонгино 120 г, лууван 100 г, уаан лооль 200 г, тунгалаг шөл 125г, хар пиво 125г, амт оруулагч.",
+    "photo": 5,
+    "author": "Byektilyeu",
+    "video": "v4",
+    "rating": 7,
+    "content": "Тахианы жигнэсэн гуяаар шөл хийх",
+    "steps": "Тахианы гуяны хэсгийг давс, нунтаг повоор цацаж, амт тохируулаад, халаасан тостой хайруулын тавганд хайрагдас тогттол нь шарна. Сонгино, лууван, улаан лоолийг жижиглэн хэрчээд шарж байгаа мах руу лаврын навчны хамт хийж, шөл, пивоо нэмээд хутгаж буцалгана. Дараа нь таглаад зөөлөн гал дээр 25 мин жигнэнэ. Лаврын навчийг авсны дараа цөцгий нэмж байнга хутган зөөлөн буцалгаж, бэлэн болгоод олгоно. ",
+    "calorie": 128,
+    "bestseller": false,
+    "category": "627d43263392ba181bdbd888",
+    "createUser": "627d47033392ba181bdbd903",
+    "updateUser": "627d47033392ba181bdbd903"
   }
 ]
