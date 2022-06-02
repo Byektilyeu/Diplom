@@ -167,19 +167,20 @@ exports.createFood = asyncHandler(async (req, res, next) => {
 
 exports.deleteFood = asyncHandler(async (req, res, next) => {
   const food = await Food.findById(req.params.id);
+  const user = await User.findById(req.userId);
 
   if (!food) {
     throw new MyError(req.params.id + "ID тэй хоол байхгүй байна", 404);
   }
-
-  if (food.createUser.toString() !== req.userId) {
+  if (user.role === "admin") {
+    food.remove();
+  } else if (food.createUser.toString() !== req.userId) {
     throw new MyError(
       "Та зөвхөн өөрийнхөө оруулсан хоолны мэдээллийг л устгах боломжтой",
       403
     );
   }
 
-  const user = await User.findById(req.userId);
   food.remove();
 
   res.status(200).json({
@@ -190,6 +191,7 @@ exports.deleteFood = asyncHandler(async (req, res, next) => {
 });
 
 exports.updateFood = asyncHandler(async (req, res, next) => {
+  const user = await User.findById(req.userId);
   const food = await Food.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -199,19 +201,16 @@ exports.updateFood = asyncHandler(async (req, res, next) => {
     throw new MyError(req.params.id + " ID-тэй хоол байхгүй", 400);
   }
 
-  if (food.createUser.toString() !== req.userId && req.userRole !== "admin") {
+  if (user.role === "admin" || req.body.updateUser === req.userId) {
+    // //object json dotor davtalt hiih for davtalt
+    for (let attr in req.body) {
+      // console.log(attr);
+      food[attr] == req.body[attr];
+    }
+    food.save();
+  } else if (food.createUser.toString() !== req.userId) {
     throw new MyError("Та зөвхөн өөрийнхөө хоолыг л засах боломжтой", 403);
   }
-
-  req.body.updateUser = req.userId;
-
-  //object json dotor davtalt hiih for davtalt
-  for (let attr in req.body) {
-    // console.log(attr);
-    food[attr] == req.body[attr];
-  }
-
-  food.save();
 
   res.status(200).json({
     success: true,

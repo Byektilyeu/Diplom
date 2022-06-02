@@ -39,12 +39,12 @@ const importData = async () => {
 
 const deleteData = async () => {
   try {
-    await Category.deleteMany();
     await Food.deleteMany();
+    await Category.deleteMany();
     await User.deleteMany();
     console.log("ugugdliig ustgalaa".red.inverse);
   } catch (err) {
-    console.log(err.red.inverse);
+    console.log(err + "+++++++++++++++++++++++++++++++++");
   }
 };
 

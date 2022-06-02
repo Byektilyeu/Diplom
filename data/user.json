@@ -4,20 +4,15 @@
     "name": "Beka",
     "email": "Beka@gmail.com",
     "role": "user",
-    "password": "1234"
-  },
-  {
-    "_id": "620c8db6dc0b6bb8ed030f75",
-    "name": "Operator",
-    "email": "op@gmail.com",
-    "role": "operator",
-    "password": "1234"
+    "password": "1234",
+    "cart": "629876c86cdbeb9f778740a9"
   },
   {
     "_id": "627cf2c822a2fa96d404186f",
     "name": "bekadmin",
     "email": "bekadmin@gmail.com",
     "role": "admin",
-    "password": "1234"
+    "password": "1234",
+    "cart": "629876c86cdbeb9f778740ac"
   }
 ]

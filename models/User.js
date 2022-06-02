@@ -44,7 +44,7 @@ const UserSchema = new mongoose.Schema({
   //   ],
   // },
 
-  cart: [{ type: mongoose.Types.ObjectId, ref: "Food" }],
+  cart: [{ type: mongoose.Types.ObjectId, ref: "Food", unique: true }],
 
   resetPasswordToken: String,
   reserPasswordExpire: Date,
